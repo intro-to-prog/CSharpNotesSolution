@@ -65,5 +65,30 @@ namespace CSharpNotes
             Assert.True(isOldEnough);
 
         }
+
+        [Fact]
+        public void ImplicitlyTypedVariablesWithVar()
+        {
+
+            var age = 52.6;
+            var name = "Jeff";
+            var donald = new Duck();
+
+           // name = 1138;
+
+
+        }
+        [Fact]
+        public void ImplicitInDotNet5()
+        {
+            var donald = new Duck();
+            Duck wally = new();
+
+        }
+    }
+
+    public class Duck
+    {
+
     }
 }
