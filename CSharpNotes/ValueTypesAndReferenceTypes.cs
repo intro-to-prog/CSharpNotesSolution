@@ -11,9 +11,51 @@ namespace CSharpNotes
     {
 
         [Fact]
-        public void ExampleofValueTypes()
+        public void TellingTheDifference()
         {
-            
+            var age = 52; // anything that is defined by a "struct" is a value type
+            var name = "Ray"; // anything that is defined by a "class" is a reference type.
+
         }
+
+        [Fact]
+        public void MemoryAndValueTypes()
+        {
+            int x = 10;
+            int y = x;
+
+            x = 20;
+
+            Assert.Equal(10, y);
+        }
+        [Fact]
+        public void ReferenceTypesAndMemory()
+        {
+            Dog x = new Dog();
+            x.Name = "Rover";
+
+            Dog y = x;
+
+            x.Name = "Fido";
+
+            Assert.Equal("Fido", y.Name); // A "Side Effect"
+
+            foreach (var x in Enumerable.Range(1, 100000))
+            {
+                var temp = new Dog();
+                temp.Name = "Dog" + x.ToString();
+            }
+        }
+
+        [Fact]
+        public void StringsAndMemoryAndStuff()
+        {
+            Assert.True(false);
+        }
+    }
+
+    public class Dog
+    {
+        public string Name;
     }
 }
