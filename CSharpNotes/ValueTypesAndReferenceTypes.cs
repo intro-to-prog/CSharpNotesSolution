@@ -40,10 +40,10 @@ namespace CSharpNotes
 
             Assert.Equal("Fido", y.Name); // A "Side Effect"
 
-            foreach (var x in Enumerable.Range(1, 100000))
+            foreach (var z in Enumerable.Range(1, 100000))
             {
                 var temp = new Dog();
-                temp.Name = "Dog" + x.ToString();
+                temp.Name = "Dog" + z.ToString();
             }
         }
 
