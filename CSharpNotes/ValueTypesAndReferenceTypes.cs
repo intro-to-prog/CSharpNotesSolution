@@ -31,6 +31,7 @@ namespace CSharpNotes
         [Fact]
         public void ReferenceTypesAndMemory()
         {
+
             Dog x = new Dog();
             x.Name = "Rover";
 
@@ -52,10 +53,5 @@ namespace CSharpNotes
         {
             Assert.True(false);
         }
-    }
-
-    public class Dog
-    {
-        public string Name;
     }
 }
