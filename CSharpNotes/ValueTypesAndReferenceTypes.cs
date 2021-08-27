@@ -1,9 +1,11 @@
-﻿using System;
+﻿using CSharpNotes.Wild;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xunit;
+
 
 namespace CSharpNotes
 {
@@ -31,8 +33,9 @@ namespace CSharpNotes
         [Fact]
         public void ReferenceTypesAndMemory()
         {
+            //var ed = new Horse();
 
-            Dog x = new Dog();
+           Dog x = new Dog();
             x.Name = "Rover";
 
             Dog y = x;
@@ -48,10 +51,6 @@ namespace CSharpNotes
             }
         }
 
-        [Fact]
-        public void StringsAndMemoryAndStuff()
-        {
-            Assert.True(false);
-        }
+       
     }
 }
